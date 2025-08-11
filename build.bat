@@ -6,9 +6,18 @@ rem Build parameters
 rem Usage: build [Debug|Release] [x86|x64|AnyCPU]
 rem Defaults: Debug x86
 rem =============================
-set CFG=%1
+set ARG1=%~1
+set ARG2=%~2
+
+rem 帮助信息
+if /I "%ARG1%"=="/h" goto :help
+if /I "%ARG1%"=="-h" goto :help
+if /I "%ARG1%"=="--help" goto :help
+if /I "%ARG1%"=="/?" goto :help
+
+set CFG=%ARG1%
 if "%CFG%"=="" set CFG=Debug
-set PLAT=%2
+set PLAT=%ARG2%
 if "%PLAT%"=="" set PLAT=x86
 
 echo 开始编译 CardReader 解决方案... (^%CFG^% / ^%PLAT^%)
@@ -99,3 +108,17 @@ echo ✅ Null 引用安全
 echo ✅ 无未使用变量
 echo.
 pause
+
+goto :eof
+
+:help
+echo 用法: build [Configuration] [Platform]
+echo 示例:
+echo   build            ^(默认 Debug x86^)
+echo   build Release x64
+echo   build Debug AnyCPU
+echo.
+echo 参数说明:
+echo   Configuration: Debug ^| Release
+echo   Platform     : x86 ^| x64 ^| AnyCPU
+goto :eof
