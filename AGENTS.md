@@ -1,36 +1,35 @@
 # Repository Guidelines
 
-## Project Structure & Modules
-- `Reader_Sample/`: WinForms app (.NET Framework 4.8). Forms include `Form1`, `m1`, `CPU`, `15693`, `sfz`; outputs under `bin/` per configuration.
-- `CardReaderLib/`: Reusable library (folders: `Core/`, `Models/`, `Exceptions/`, `Examples/`). Primary entry: `CardReaderManager.cs`.
-- `CardReaderWPF/`: WPF demo UI (e.g., `MainWindow.xaml`, `Services/`).
-- Root: `CardReader.sln`, `build.bat`, and solution/project files; build artifacts in `bin/` and `obj/`.
+## 项目结构与模块
+- `Reader_Sample/`：WinForms 示例（.NET Framework 4.8），窗体含 `Form1`、`m1`、`CPU`、`15693`、`sfz`；产物输出到各自 `bin/`。
+- `CardReaderLib/`：通用库，目录含 `Core/`、`Models/`、`Exceptions/`、`Examples/`，核心类为 `CardReaderManager.cs`。
+- `CardReaderWPF/`：WPF 示例界面（`MainWindow.xaml`、`Services/`）。
+- 根目录：`CardReader.sln`、`build.bat`、各项目文件；构建中间产物在 `obj/`。
 
-## Build, Run, and Dev Commands
-- Build all (x86 Debug): `build.bat` — discovers MSBuild and builds `CardReaderLib`, `CardReaderWPF`, then `CardReader.sln`.
-- Build solution: `msbuild CardReader.sln /p:Configuration=Debug /p:Platform=x86 /v:m`.
-- Build single project: `msbuild CardReaderLib\CardReaderLib.csproj /p:Configuration=Debug /p:Platform=x86`.
-- Run WinForms sample: `Reader_Sample\bin\Debug\Reader_Sample.exe`.
-- Run WPF sample: `CardReaderWPF\bin\Debug\CardReaderWPF.exe`.
-- Clean: `msbuild CardReader.sln /t:Clean`.
+## 构建、运行与开发命令
+- 一键构建（Debug x86）：`build.bat`（自动查找 MSBuild，按库→WPF→解决方案顺序构建）。
+- 解决方案构建：`msbuild CardReader.sln /p:Configuration=Debug /p:Platform=x86 /v:m`
+- 单项目构建：`msbuild CardReaderLib\CardReaderLib.csproj /p:Configuration=Debug /p:Platform=x86`
+- Release/x64 示例：`msbuild CardReader.sln /p:Configuration=Release /p:Platform=x64`
+- 运行 WinForms：`Reader_Sample\bin\Debug\Reader_Sample.exe`
+- 运行 WPF：`CardReaderWPF\bin\Debug\CardReaderWPF.exe`
+- 清理：`msbuild CardReader.sln /t:Clean`
 
-## Coding Style & Naming
-- Language: C# 7.3; Target: .NET Framework 4.8; indent 4 spaces; UTF-8.
-- Naming: PascalCase for types/methods/properties; camelCase for locals/parameters; private fields `_camelCase` (e.g., `_readerHandle`).
-- Structure: one type per file; namespaces reflect folders (e.g., `CardReaderLib.Models`). Prefer explicit access modifiers and early returns.
-- Docs: XML doc comments for public APIs; add concise Chinese comments where it clarifies device behavior.
+## 代码风格与命名
+- C# 7.3，.NET Framework 4.8；缩进 4 空格，UTF-8。
+- 命名：类型/方法/属性 PascalCase；局部/参数 camelCase；私有字段 `_camelCase`（例：`_readerHandle`）。
+- 结构：每文件单一类型；命名空间与目录对应（如 `CardReaderLib.Models`）；显式访问修饰符与早返回。
+- 文档：公共 API 使用 XML 注释；涉及设备行为/错误码可补充简要中文注释。
 
-## Testing Guidelines
-- No test project is checked in. For library code, add `CardReaderLib.Tests` (MSTest or NUnit). Name test classes `*Tests` and methods `MethodName_Should...`.
-- Run (VS): Test Explorer. CLI example: `vstest.console.exe CardReaderLib.Tests\bin\Debug\CardReaderLib.Tests.dll`.
-- Focus: cover `CardReaderManager` flows, error codes, and native interop boundaries.
+## 测试指南
+- 建议新增 `CardReaderLib.Tests`（MSTest/NUnit）。测试类 `*Tests`，方法 `MethodName_Should...`。
+- 运行：VS Test Explorer；或 `vstest.console.exe CardReaderLib.Tests\bin\Debug\CardReaderLib.Tests.dll`。
+- 重点覆盖：`CardReaderManager` 主要流程、错误码分支、P/Invoke 边界与异常处理。
 
-## Commit & Pull Requests
-- Commits: one logical change; imperative mood; concise English/Chinese. Example: `Fix HD reader init on x86`.
-- Reference issues (`#123`), include rationale if touching hardware timing or error codes.
-- PRs: clear description, steps to validate (device/driver versions), linked issues; screenshots for UI changes; note any config keys added to `app.config`.
+## 提交与 Pull Request
+- 提交：一次一事，祈使语，简明中/英皆可。示例：`fix: HD reader init on x86`。
+- PR：清晰描述、复现/验证步骤（含设备与驱动版本）、关联 Issue；UI 改动附截图；`app.config` 变更需注明新增键值。
 
-## Security & Configuration
-- Do not commit device IDs, licenses, or personal photos. Keep secrets out of `app.config`; provide sample values.
-- Document required drivers and versions in PRs that change device initialization or transport (USB/COM).
-
+## 安全与配置
+- 不提交设备 ID、许可证、个人照片等敏感信息；`app.config` 放示例值。
+- 若改动设备初始化或传输方式（USB/COM），请在 PR 中注明依赖驱动与版本。
