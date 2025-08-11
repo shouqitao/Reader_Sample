@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardReaderWPF", "CardReader
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reader_Sample", "Reader_Sample\\Reader_Sample.csproj", "{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardReaderLib.Tests", "CardReaderLib.Tests\CardReaderLib.Tests.csproj", "{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,18 @@ Global
 		{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}.Release|x64.Build.0 = Release|x64
 		{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}.Release|x86.ActiveCfg = Release|x86
 		{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}.Release|x86.Build.0 = Release|x86
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Debug|x64.Build.0 = Debug|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Debug|x86.Build.0 = Debug|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Release|x64.ActiveCfg = Release|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Release|x64.Build.0 = Release|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D9A3C0E-7E5A-4A8A-9E3E-7C0F2F1E9B77}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

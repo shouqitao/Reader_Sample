@@ -1,0 +1,32 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+**/bin/
+**/obj/
+TestResults/
+*.cache
+*.log
+*.tlog
+
+# NuGet
+packages/
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+# Others
+*.pidb
+*.svclog
+*.etl
+*.mdb
+*.opendb
+*.db
+*.tmp
+*.psess
+*.vsp
+*.vspx
