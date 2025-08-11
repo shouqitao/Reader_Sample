@@ -1,5 +1,17 @@
 @echo off
-echo 开始编译 CardReader 解决方案...
+setlocal enabledelayedexpansion
+
+rem =============================
+rem Build parameters
+rem Usage: build [Debug|Release] [x86|x64|AnyCPU]
+rem Defaults: Debug x86
+rem =============================
+set CFG=%1
+if "%CFG%"=="" set CFG=Debug
+set PLAT=%2
+if "%PLAT%"=="" set PLAT=x86
+
+echo 开始编译 CardReader 解决方案... (^%CFG^% / ^%PLAT^%)
 echo.
 
 REM 检查 MSBuild 是否可用
@@ -39,7 +51,7 @@ echo.
 
 REM 编译 CardReaderLib
 echo 正在编译 CardReaderLib...
-"%MSBUILD_PATH%" CardReaderLib\CardReaderLib.csproj /p:Configuration=Debug /p:Platform=x86 /verbosity:minimal /warnaserror
+"%MSBUILD_PATH%" CardReaderLib\CardReaderLib.csproj /p:Configuration=%CFG% /p:Platform=%PLAT% /verbosity:minimal /warnaserror
 if %errorlevel% neq 0 (
     echo 错误: CardReaderLib 编译失败（可能包含警告）
     echo 提示: 请检查编译输出中的警告信息
@@ -51,7 +63,7 @@ echo.
 
 REM 编译 CardReaderWPF
 echo 正在编译 CardReaderWPF...
-"%MSBUILD_PATH%" CardReaderWPF\CardReaderWPF.csproj /p:Configuration=Debug /p:Platform=x86 /verbosity:minimal /warnaserror
+"%MSBUILD_PATH%" CardReaderWPF\CardReaderWPF.csproj /p:Configuration=%CFG% /p:Platform=%PLAT% /verbosity:minimal /warnaserror
 if %errorlevel% neq 0 (
     echo 错误: CardReaderWPF 编译失败（可能包含警告）
     echo 提示: 请检查编译输出中的警告信息
@@ -63,7 +75,7 @@ echo.
 
 REM 编译整个解决方案
 echo 正在编译整个解决方案...
-"%MSBUILD_PATH%" CardReader.sln /p:Configuration=Debug /p:Platform=x86 /verbosity:minimal /warnaserror
+"%MSBUILD_PATH%" CardReader.sln /p:Configuration=%CFG% /p:Platform=%PLAT% /verbosity:minimal /warnaserror
 if %errorlevel% neq 0 (
     echo 错误: 解决方案编译失败（可能包含警告）
     echo 提示: 请检查编译输出中的警告信息
@@ -77,8 +89,8 @@ echo 所有项目编译成功！（无编译警告）
 echo ===================================
 echo.
 echo 生成的文件位置:
-echo - CardReaderLib.dll: CardReaderLib\bin\x86\Debug\
-echo - CardReaderWPF.exe: CardReaderWPF\bin\Debug\
+echo - CardReaderLib.dll: CardReaderLib\bin\%PLAT%\%CFG%\ 或项目默认输出
+echo - CardReaderWPF.exe: CardReaderWPF\bin\%CFG%\ 或项目默认输出
 echo.
 echo 代码质量检查:
 echo ✅ 无编译错误
@@ -86,5 +98,4 @@ echo ✅ 无编译警告
 echo ✅ Null 引用安全
 echo ✅ 无未使用变量
 echo.
-
 pause

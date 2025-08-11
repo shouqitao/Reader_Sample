@@ -7,9 +7,10 @@
 - 根目录：`CardReader.sln`、`build.bat`、各项目文件；构建中间产物在 `obj/`。
 
 ## 构建、运行与开发命令
-- 一键构建（Debug x86）：`build.bat`（自动查找 MSBuild，按库→WPF→解决方案顺序构建）。
+- 一键构建（默认 Debug/x86）：`build.bat`（自动查找 MSBuild，按库→WPF→解决方案顺序构建）。
 - 解决方案构建：`msbuild CardReader.sln /p:Configuration=Debug /p:Platform=x86 /v:m`
 - 单项目构建：`msbuild CardReaderLib\CardReaderLib.csproj /p:Configuration=Debug /p:Platform=x86`
+- build.bat 传参：`build.bat Release x64`（或 `build.bat Debug x86`）。
 - Release/x64 示例：`msbuild CardReader.sln /p:Configuration=Release /p:Platform=x64`
 - 运行 WinForms：`Reader_Sample\bin\Debug\Reader_Sample.exe`
 - 运行 WPF：`CardReaderWPF\bin\Debug\CardReaderWPF.exe`
@@ -33,3 +34,7 @@
 ## 安全与配置
 - 不提交设备 ID、许可证、个人照片等敏感信息；`app.config` 放示例值。
 - 若改动设备初始化或传输方式（USB/COM），请在 PR 中注明依赖驱动与版本。
+ 
+## 目录变更说明（维护者须知）
+- WinForms 项目已整体迁入 `Reader_Sample/` 文件夹；未纳入项目的历史/辅助源码移动至 `Reader_Sample/Extras/`。
+- 解决方案 `CardReader.sln` 已更新 WinForms 项目路径为 `Reader_Sample\Reader_Sample.csproj`。
