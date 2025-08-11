@@ -1,0 +1,2 @@
+D:\source\repos\Reader_Sample\CardReaderLib\obj\x86\Debug\CardReaderLib.csproj.AssemblyReference.cache
+D:\source\repos\Reader_Sample\CardReaderLib\obj\x86\Debug\CardReaderLib.csproj.CoreCompileInputs.cache

@@ -1,0 +1,13 @@
+G:\张亚军\SDK\开发包SDK\Reader_Sample\bin\Release\Reader_Sample.exe
+G:\张亚军\SDK\开发包SDK\Reader_Sample\bin\Release\Reader_Sample.pdb
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample._15693.resources
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.CPU.resources
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.Form1.resources
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.m1.resources
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.sfz.resources
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.Properties.Resources.resources
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.csproj.GenerateResource.cache
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.csproj.CoreCompileInputs.cache
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.exe
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.pdb
+G:\张亚军\SDK\开发包SDK\Reader_Sample\obj\x86\Release\Reader_Sample.csproj.AssemblyReference.cache

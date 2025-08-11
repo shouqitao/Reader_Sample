@@ -1,0 +1,17 @@
+D:\source\repos\Reader_Sample\CardReaderWPF\bin\Debug\CardReaderWPF.exe.config
+D:\source\repos\Reader_Sample\CardReaderWPF\bin\Debug\CardReaderWPF.exe
+D:\source\repos\Reader_Sample\CardReaderWPF\bin\Debug\CardReaderWPF.pdb
+D:\source\repos\Reader_Sample\CardReaderWPF\bin\Debug\CardReaderLib.dll
+D:\source\repos\Reader_Sample\CardReaderWPF\bin\Debug\CardReaderLib.pdb
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF.csproj.AssemblyReference.cache
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\MainWindow.baml
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\MainWindow.g.cs
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\App.g.cs
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF_MarkupCompile.cache
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF.g.resources
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF.Properties.Resources.resources
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF.csproj.GenerateResource.cache
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF.csproj.CoreCompileInputs.cache
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardRead.A71F21B4.Up2Date
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF.exe
+D:\source\repos\Reader_Sample\CardReaderWPF\obj\x86\Debug\CardReaderWPF.pdb

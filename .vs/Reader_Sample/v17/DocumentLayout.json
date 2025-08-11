@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\source\\repos\\Reader_Sample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|D:\\source\\repos\\Reader_Sample\\15693.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|solutionrelative:15693.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CardReaderWPF\\CardReaderWPF.csproj|d:\\source\\repos\\reader_sample\\cardreaderwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CardReaderWPF\\CardReaderWPF.csproj|solutionrelative:cardreaderwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8E4F3A-9F6C-4D1E-8A5B-7C3D4E5F6A7B}|CardReaderLib\\CardReaderLib.csproj|D:\\source\\repos\\Reader_Sample\\cardreaderlib\\cardreadermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8E4F3A-9F6C-4D1E-8A5B-7C3D4E5F6A7B}|CardReaderLib\\CardReaderLib.csproj|solutionrelative:cardreaderlib\\cardreadermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8E4F3A-9F6C-4D1E-8A5B-7C3D4E5F6A7B}|CardReaderLib\\CardReaderLib.csproj|D:\\source\\repos\\Reader_Sample\\cardreaderlib\\examples\\cardreaderexamples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8E4F3A-9F6C-4D1E-8A5B-7C3D4E5F6A7B}|CardReaderLib\\CardReaderLib.csproj|solutionrelative:cardreaderlib\\examples\\cardreaderexamples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|D:\\source\\repos\\Reader_Sample\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|D:\\source\\repos\\Reader_Sample\\dev.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|solutionrelative:dev.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|D:\\source\\repos\\Reader_Sample\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BABE051A-CAF9-4F13-A6CA-E2CB56631C14}|Reader_Sample.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\source\\repos\\Reader_Sample\\CardReaderWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "CardReaderWPF\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\source\\repos\\Reader_Sample\\CardReaderWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "CardReaderWPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAAADIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T23:28:58.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "15693.cs",
+              "DocumentMoniker": "D:\\source\\repos\\Reader_Sample\\15693.cs",
+              "RelativeDocumentMoniker": "15693.cs",
+              "ToolTip": "D:\\source\\repos\\Reader_Sample\\15693.cs",
+              "RelativeToolTip": "15693.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAA+wBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T23:14:37.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardReaderManager.cs",
+              "DocumentMoniker": "D:\\source\\repos\\Reader_Sample\\CardReaderLib\\CardReaderManager.cs",
+              "RelativeDocumentMoniker": "CardReaderLib\\CardReaderManager.cs",
+              "ToolTip": "D:\\source\\repos\\Reader_Sample\\CardReaderLib\\CardReaderManager.cs",
+              "RelativeToolTip": "CardReaderLib\\CardReaderManager.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAA5wEsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T22:56:15.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CardReaderExamples.cs",
+              "DocumentMoniker": "D:\\source\\repos\\Reader_Sample\\CardReaderLib\\Examples\\CardReaderExamples.cs",
+              "RelativeDocumentMoniker": "CardReaderLib\\Examples\\CardReaderExamples.cs",
+              "ToolTip": "D:\\source\\repos\\Reader_Sample\\CardReaderLib\\Examples\\CardReaderExamples.cs",
+              "RelativeToolTip": "CardReaderLib\\Examples\\CardReaderExamples.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T07:49:39.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\source\\repos\\Reader_Sample\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\source\\repos\\Reader_Sample\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T12:13:40.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dev.cs",
+              "DocumentMoniker": "D:\\source\\repos\\Reader_Sample\\dev.cs",
+              "RelativeDocumentMoniker": "dev.cs",
+              "ToolTip": "D:\\source\\repos\\Reader_Sample\\dev.cs",
+              "RelativeToolTip": "dev.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T12:13:27.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\source\\repos\\Reader_Sample\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\source\\repos\\Reader_Sample\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAuwEEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T12:08:20.26Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

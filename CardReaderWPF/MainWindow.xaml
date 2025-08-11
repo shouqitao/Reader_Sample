@@ -1,0 +1,211 @@
+<Window x:Class="CardReaderWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="读卡器示例程序 - WPF版" Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen" ResizeMode="CanResize">
+    
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinHeight" Value="35"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.6"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+        </Style>
+        
+        <Style TargetType="GroupBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 标题栏 -->
+        <Border Grid.Row="0" Background="#2E86AB" Padding="15,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="📱" FontSize="24" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBlock Text="多功能读卡器示例程序" FontSize="18" FontWeight="Bold" 
+                          Foreground="White" VerticalAlignment="Center"/>
+                <TextBlock Text="基于 CardReaderLib 类库" FontSize="12" 
+                          Foreground="#E8F4FD" VerticalAlignment="Bottom" Margin="20,0,0,2"/>
+            </StackPanel>
+        </Border>
+        
+        <!-- 主要内容区域 -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- 左侧控制面板 -->
+            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    
+                    <!-- 设备连接 -->
+                    <GroupBox Header="🔌 设备连接">
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Content="连接方式:"/>
+                                <ComboBox Grid.Column="1" x:Name="cmbConnectionType" 
+                                         SelectedIndex="0" Margin="5">
+                                    <ComboBoxItem Content="USB (推荐)"/>
+                                    <ComboBoxItem Content="串口"/>
+                                </ComboBox>
+                                <Button Grid.Column="2" x:Name="btnConnect" Content="连接设备" 
+                                       Click="BtnConnect_Click" Background="#28A745" Foreground="White"/>
+                            </Grid>
+                            <TextBlock x:Name="txtConnectionStatus" Text="未连接" 
+                                      HorizontalAlignment="Center" Margin="5"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <!-- 身份证读取 -->
+                    <GroupBox Header="🪪 身份证读取">
+                        <StackPanel>
+                            <Button x:Name="btnReadIdCard" Content="读取身份证" 
+                                   Click="BtnReadIdCard_Click" Background="#007BFF" Foreground="White"/>
+                            <Button x:Name="btnReadIdCardHD" Content="读取身份证(华大)" 
+                                   Click="BtnReadIdCardHD_Click" Background="#6F42C1" Foreground="White"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Image x:Name="imgIdPhoto" Width="100" Height="120" Margin="5"
+                                      Stretch="Uniform" Source="{x:Null}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <!-- 银行卡读取 -->
+                    <GroupBox Header="💳 银行卡读取">
+                        <StackPanel>
+                            <Button x:Name="btnReadBankContact" Content="接触式银行卡" 
+                                   Click="BtnReadBankContact_Click" Background="#FD7E14" Foreground="White"/>
+                            <Button x:Name="btnReadBankContactless" Content="非接触银行卡" 
+                                   Click="BtnReadBankContactless_Click" Background="#E83E8C" Foreground="White"/>
+                            <TextBox x:Name="txtBankCardNo" IsReadOnly="True" Height="30" 
+                                    Text="银行卡号将显示在这里"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <!-- 其他卡片 -->
+                    <GroupBox Header="🎫 其他卡片">
+                        <StackPanel>
+                            <Button x:Name="btnReadSocialCard" Content="读取社保卡" 
+                                   Click="BtnReadSocialCard_Click" Background="#20C997" Foreground="White"/>
+                            <Button x:Name="btnReadM1Card" Content="读取M1卡" 
+                                   Click="BtnReadM1Card_Click" Background="#6C757D" Foreground="White"/>
+                            <TextBox x:Name="txtM1CardNo" IsReadOnly="True" Height="30" 
+                                    Text="M1卡号将显示在这里"/>
+                            <Button x:Name="btnReadMagCard" Content="刷磁条卡" 
+                                   Click="BtnReadMagCard_Click" Background="#795548" Foreground="White"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <!-- 二维码扫描 -->
+                    <GroupBox Header="📱 二维码扫描">
+                        <StackPanel>
+                            <Button x:Name="btnScanQR" Content="扫描二维码" 
+                                   Click="BtnScanQR_Click" Background="#17A2B8" Foreground="White"/>
+                            <Button x:Name="btnStopScan" Content="停止扫描" IsEnabled="False"
+                                   Click="BtnStopScan_Click" Background="#DC3545" Foreground="White"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <!-- 自动识别 -->
+                    <GroupBox Header="🎯 自动识别">
+                        <StackPanel>
+                            <Button x:Name="btnAutoRead" Content="自动识别读卡" 
+                                   Click="BtnAutoRead_Click" Background="#FF6B35" Foreground="White"/>
+                            <Button x:Name="btnStopAutoRead" Content="停止自动识别" IsEnabled="False"
+                                   Click="BtnStopAutoRead_Click" Background="#DC3545" Foreground="White"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <!-- 设备控制 -->
+                    <GroupBox Header="🔧 设备控制">
+                        <StackPanel>
+                            <Button x:Name="btnBeep" Content="蜂鸣测试" 
+                                   Click="BtnBeep_Click" Background="#FFC107" Foreground="Black"/>
+                            <Button x:Name="btnClearLog" Content="清空日志" 
+                                   Click="BtnClearLog_Click" Background="#6C757D" Foreground="White"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                </StackPanel>
+            </ScrollViewer>
+            
+            <!-- 右侧信息显示区域 -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <!-- 卡片信息显示 -->
+                <GroupBox Grid.Row="0" Header="📋 卡片信息">
+                    <TextBox x:Name="txtCardInfo" IsReadOnly="True" TextWrapping="Wrap"
+                            Background="#F8F9FA" FontFamily="Consolas" Text="读取的卡片信息将在此显示..."/>
+                </GroupBox>
+                
+                <!-- 操作日志 -->
+                <GroupBox Grid.Row="1" Header="📝 操作日志">
+                    <TextBox x:Name="txtLog" IsReadOnly="True" TextWrapping="Wrap"
+                            Background="#F8F9FA" FontFamily="Consolas" Text="程序日志将在此显示..."/>
+                </GroupBox>
+            </Grid>
+        </Grid>
+        
+        <!-- 状态栏 -->
+        <Border Grid.Row="2" Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Horizontal" Margin="10,5">
+                <TextBlock Text="状态:" FontWeight="Bold"/>
+                <TextBlock x:Name="txtStatus" Text="就绪" Margin="5,0"/>
+                <Separator Margin="10,0"/>
+                <TextBlock Text="版本:" FontWeight="Bold"/>
+                <TextBlock Text="v1.0.0" Margin="5,0"/>
+                <Separator Margin="10,0"/>
+                <TextBlock Text="基于 CardReaderLib" Margin="5,0"/>
+            </StackPanel>
+        </Border>
+        
+        <!-- 加载指示器 -->
+        <Border x:Name="loadingOverlay" Grid.RowSpan="3" Background="#80000000" 
+               Visibility="Collapsed">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ProgressBar IsIndeterminate="True" Width="200" Height="20" Margin="10"/>
+                <TextBlock x:Name="txtLoadingMessage" Text="正在处理..." 
+                          Foreground="White" FontSize="14" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+        
+    </Grid>
+</Window>

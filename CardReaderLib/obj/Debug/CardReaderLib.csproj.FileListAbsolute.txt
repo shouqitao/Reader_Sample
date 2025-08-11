@@ -1,0 +1,6 @@
+D:\source\repos\Reader_Sample\CardReaderLib\bin\Debug\CardReaderLib.dll
+D:\source\repos\Reader_Sample\CardReaderLib\bin\Debug\CardReaderLib.pdb
+D:\source\repos\Reader_Sample\CardReaderLib\obj\Debug\CardReaderLib.csproj.AssemblyReference.cache
+D:\source\repos\Reader_Sample\CardReaderLib\obj\Debug\CardReaderLib.csproj.CoreCompileInputs.cache
+D:\source\repos\Reader_Sample\CardReaderLib\obj\Debug\CardReaderLib.dll
+D:\source\repos\Reader_Sample\CardReaderLib\obj\Debug\CardReaderLib.pdb
